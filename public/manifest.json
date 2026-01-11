@@ -1,0 +1,67 @@
+{
+   "short_name": "Léandro",
+   "name": "Léandro Tijink",
+   "icons": [{
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/64x64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/maskable-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "maskable"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/maskable-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "maskable"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/maskable-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+   }, {
+      "src": "https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/branding/maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+   }],
+   "start_url": "/",
+   "background_color": "#FFFFFF",
+   "display": "standalone",
+   "orientation": "portrait",
+   "scope": "/",
+   "theme_color": "#00D492",
+   "description": "UX Designer & Software Engineer"
+}

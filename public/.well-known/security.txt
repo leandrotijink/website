@@ -1,0 +1,14 @@
+# Please report any vulnerabilities, concerns and potential risks to me personally.
+# To help me solve issues quickly, please be as clear as possible.
+
+# Security Contact
+Contact: x.com/leandrotijink
+
+# The languages we speak
+Preferred-Languages: nl, en
+
+# Official location of this file
+Canonical: https://leandrotijink.com/.well-known/security.txt
+
+# Information valid until:
+Expires: Wed, 31 Dec 2026 23:59:59 +0100

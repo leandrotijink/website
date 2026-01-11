@@ -1,0 +1,25 @@
+@layer base {
+	:not(body) * {
+		scrollbar-color: var(--color-neutral-300) transparent;
+
+		@media (prefers-color-scheme: dark) {
+			scrollbar-color: var(--color-neutral-600) transparent;
+		}
+	}
+
+	overlay {
+		& > content {
+			@apply bg-neutral-100 dark:bg-neutral-950 rounded-2xl ring ring-neutral-300 dark:ring-neutral-800;
+			@apply after:absolute w-11/12 max-w-xl min-h-48 max-h-4/5;
+
+			&::after {
+				@apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+				@apply w-10 h-10 border-4 border-neutral-200 dark:border-neutral-600 border-t-neutral-500 dark:border-t-neutral-300 rounded-full animate-spin;
+			}
+		}
+	}
+
+	hr {
+		@apply border-black/10 dark:border-white/10;
+	}
+}

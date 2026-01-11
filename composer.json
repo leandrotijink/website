@@ -1,0 +1,84 @@
+{
+	"name": "leandrotijink/website",
+	"type": "project",
+	"description": "Source code for my personal website.",
+	"license": "proprietary",
+	"keywords": [
+		"portfolio",
+		"blog",
+		"projects",
+		"about"
+	],
+	"homepage": "https://leandrotijink.com",
+	"require": {
+		"php-64bit": "^8.5",
+		"ext-imagick": "*",
+		"ext-pdo": "*",
+		"intervention/image-laravel": "^1.5",
+		"intervention/validation": "^4.6",
+		"laravel/framework": "^12.0",
+		"laravel/pennant": "^1.18",
+		"livewire/livewire": "^3.7",
+		"resend/resend-php": "^1.0",
+		"rovota/embla": "*",
+		"saloonphp/saloon": "^3.0",
+		"spatie/laravel-permission": "^6.21",
+		"spomky-labs/otphp": "^11.3",
+		"symfony/http-client": "^8.0"
+	},
+	"require-dev": {
+		"barryvdh/laravel-debugbar": "^3.16",
+		"mockery/mockery": "^1.6",
+		"nunomaduro/collision": "^8.6",
+		"phpunit/phpunit": "^11.5.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": "app/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"post-autoload-dump": [
+			"Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+			"@php artisan package:discover --ansi"
+		],
+		"post-update-cmd": [
+			"@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+		],
+		"post-root-package-install": [
+			"@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+		],
+		"dev": [
+			"Composer\\Config::disableProcessTimeout",
+			"npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan queue:listen --tries=1\" --names=server,queue --kill-others"
+		],
+		"build": [
+			"@php artisan vendor:publish --tag=embla-assets --force"
+		],
+		"test": [
+			"@php artisan config:clear --ansi",
+			"@php artisan test"
+		]
+	},
+	"extra": {
+		"laravel": {
+			"dont-discover": []
+		}
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"preferred-install": "dist",
+		"sort-packages": true,
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"php-http/discovery": true
+		}
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true
+}

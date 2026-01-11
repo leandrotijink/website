@@ -1,0 +1,14 @@
+@utility grid-cols-auto {
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+@utility variable-svg {
+	position: relative;
+	flex-shrink: 0;
+
+	& svg.icon {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}

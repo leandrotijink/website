@@ -1,0 +1,137 @@
+@layer components {
+	.carousel {
+		@apply relative w-full h-full;
+
+		& > .item {
+			@apply absolute inset-0 opacity-0 pointer-events-none;
+
+			&.visible {
+				@apply opacity-100 pointer-events-auto;
+			}
+		}
+
+		& + .indicators {
+			& > .indicator.active {
+				@apply after:block after:bg-white;
+				&:after {
+					width: 5%;
+					height: 100%;
+					animation: 5s fill-w linear;
+				}
+				&.extended:after {
+					animation: 10s fill-w linear;
+				}
+			}
+		}
+	}
+
+	.image {
+		@apply relative inline-block rounded-lg overflow-hidden after:absolute;
+
+		&.left {
+			@apply float-right mr-4 max-w-1/3;
+		}
+
+		&.right {
+			@apply float-right ml-4 max-w-1/3;
+		}
+
+		&.full {
+			@apply w-full md:rounded-xl;
+		}
+
+		& > img {
+			@apply w-full h-full object-cover;
+		}
+
+		&.spotlight:not(:focus-visible) {
+			@apply outline-2 outline-offset-2 outline-transparent hover:outline-neutral-500;
+		}
+
+		&[caption]::after {
+			@apply bottom-0 left-0 w-full text-center text-sm bg-black/50 text-white p-2 rounded-b-[inherit];
+			content: attr(caption);
+		}
+
+		&[caption]:not(.revealed)::after {
+			@apply translate-y-full bg-black/80;
+			transition: all .15s ease;
+		}
+
+		&[caption]:not(.revealed):hover::after {
+			@apply translate-y-0;
+		}
+	}
+
+	.card {
+		@apply rounded-xl border overflow-hidden;
+	}
+
+	.button {
+		@apply inline-flex cursor-pointer justify-center items-center text-center gap-x-2.5 px-4 py-2 rounded-md font-medium focus-visible:outline-2 focus-visible:outline-offset-2;
+
+		& > svg.icon {
+			height: 1.2rem;
+			width: 1.2rem;
+		}
+
+		&.minimal {
+			@apply px-0;
+		}
+
+		&.outlined {
+			@apply bg-transparent inset-ring-1;
+		}
+	}
+
+	.badge {
+		@apply inline-flex items-center gap-x-1.5 py-1.5 px-2.5 rounded-md font-medium text-sm;
+
+		&.small {
+			@apply px-2 py-1 text-xs rounded-sm;
+		}
+
+		&.subtle {
+			@apply before:block relative items-center gap-1 pl-3 pr-0;
+
+			&:before {
+				@apply absolute size-2 left-0 rounded-full;
+			};
+		}
+	}
+
+	.dot {
+		@apply size-2.5 rounded-full inline-block;
+	}
+
+	.context {
+		@apply grow w-full relative block px-4 py-3 rounded-md bg-neutral-100 dark:bg-neutral-800 border border-black/20 dark:border-white/20;
+
+		&[caption] {
+			@apply before:block;
+		}
+
+		&[caption]:before {
+			@apply font-bold mb-1.5 text-sm;
+			content: attr(caption);
+		}
+	}
+
+	.placeholder {
+		@apply flex justify-center text-center p-2 py-3.5 rounded-md border border-black/10 dark:border-white/10 text-black/50 dark:text-white/50 text-sm sm:text-base;
+		&.darkened {
+			@apply bg-neutral-500/5 dark:bg-neutral-900;
+		}
+	}
+
+	.selector {
+		&.panel {
+			@apply flex items-center gap-4 cursor-pointer py-3 px-4 inset-ring inset-ring-neutral-300 dark:inset-ring-neutral-700;
+			transition: all .15s ease;
+
+			&:has(:checked) {
+				@apply inset-ring-neutral-600 dark:inset-ring-neutral-300;
+			}
+		}
+	}
+}

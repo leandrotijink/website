@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import '../../vendor/rovota/embla/resources/styles/package.css';
+
+@import "./layers/base.css";
+@import "./layers/components.css";
+@import "./layers/utlities.css";
+
+@source '../../vendor/rovota/embla/resources/scripts/**/*.js';
+@source '../../vendor/rovota/embla/src/Components/**/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../../app/Markdown/BBCode/Parsers/**/*.php';
+@source '../../app/Markdown/Embla/Parsers/**/*.php';
+@source '../../app/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@font-face {
+	font-display: swap;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 1 1000;
+	src: url('https://leandrotijink.ams3.cdn.digitaloceanspaces.com/interface/fonts/Inter.ttf') format('truetype-variations');
+}
+
+@theme {
+	--font-sans: 'Inter', sans-serif;
+}
