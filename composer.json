@@ -14,6 +14,7 @@
 		"php-64bit": "^8.5",
 		"ext-imagick": "*",
 		"ext-pdo": "*",
+		"akira/laravel-qrcode": "^1.0",
 		"intervention/image-laravel": "^1.5",
 		"intervention/validation": "^4.6",
 		"laravel/framework": "^12.0",

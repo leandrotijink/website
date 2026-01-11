@@ -7,8 +7,9 @@
 
 namespace App\Features\Security;
 
-use App\Features\Media\QrCode;
+use Akira\QrCode\Facades\QrCode;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\HtmlString;
 use OTPHP\TOTP;
 use OTPHP\TOTPInterface;
 use Symfony\Component\Clock\Clock;
@@ -100,8 +101,8 @@ final class OneTimePassword
 
 	// -----------------
 
-	public function image(): QrCode
+	public function image(): HtmlString|string|null
 	{
-		return QrCode::from($this->totp->getProvisioningUri());
+		return QrCode::format('png')->size(300)->margin(4)->generate($this->totp->getProvisioningUri());
 	}
 }
