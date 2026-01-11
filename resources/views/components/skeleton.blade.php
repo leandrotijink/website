@@ -20,7 +20,7 @@
 		{{ $meta }}
 	@endif
 
-	@livewireStyles
+	@livewireStyles(['nonce' => $nonce])
 	@vite(['resources/styles/app.css'])
 
 </head>
@@ -45,6 +45,6 @@
 	@endisset
 
 	@vite(['resources/scripts/app.js'])
-	@livewireScriptConfig
+	@livewireScriptConfig(['nonce' => $nonce])
 </body>
 </html>
