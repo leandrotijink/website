@@ -38,6 +38,10 @@ return [
             'serialize' => false,
         ],
 
+		'apc' => [
+			'driver' => 'apc',
+		],
+
         'redis' => [
             'driver' => 'redis',
             'connection' => env('REDIS_CACHE_CONNECTION', 'cache'),
